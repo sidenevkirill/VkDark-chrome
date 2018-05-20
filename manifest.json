@@ -1,0 +1,37 @@
+{
+   "author": "Sidenev Kirill",
+   "homepage_url": "https://sidenevkirill.github.io/",
+   "default_locale": "ru",
+   "background": {
+      "scripts": [ "core/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "img/dark_16.png",
+         "24": "img/dark_24.png",
+         "32": "img/dark_32.png"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "css/vk.css" ],
+      "js": [ "core/preload.js" ],
+      "matches": [ "*://vk.com/*", "*://oauth.vk.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "core/postload.js" ],
+      "matches": [ "*://vk.com/*", "*://oauth.vk.com/*" ]
+   } ],
+   "description": "Sidenev Kirill",
+   "icons": {
+      "256": "img/256.png",
+      "128": "img/128.png",
+      "64": "img/64.png",
+      "48": "img/48.png"
+
+   },
+   "manifest_version": 2,
+   "name": "Sidenev Kirill",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "browsingData", "cookies", "storage", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.05.20.1"
+}
