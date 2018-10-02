@@ -1,1 +1,1 @@
-# Расширение для Gogle Chrome
+# Расширение для Google Chrome
